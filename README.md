@@ -112,3 +112,41 @@ graph TD
     H --> L
     J --> L
     K --> L
+###5. Программа
+package com.itproger;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        // Считываем три стороны треугольника
+        int a = input.nextInt();
+        int b = input.nextInt();
+        int c = input.nextInt();
+        
+        // Проверка неравенства треугольника
+        if (a + b <= c || a + c <= b || b + c <= a) {
+            System.out.println("Такого треугольника не существует!");
+        } 
+        // Проверка на равносторонний треугольник
+        else if (a == b && b == c) {
+            System.out.println("Треугольник равносторонний");
+        } 
+        // Проверка на равнобедренный треугольник
+        else if (a == b || b == c || a == c) {
+            System.out.println("Треугольник равнобедренный");
+        } 
+        // Проверка на прямоугольный треугольник (теорема Пифагора)
+        else if (a * a + b * b == c * c || a * a + c * c == b * b || b * b + c * c == a * a) {
+            System.out.println("Треугольник прямоугольный");
+        } 
+        // Если ни одно из условий не выполнено - треугольник разносторонний
+        else {
+            System.out.println("Треугольник разносторонний");
+        }
+        
+        input.close();
+    }
+}
