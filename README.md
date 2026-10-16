@@ -111,7 +111,7 @@ graph TD
     F --> L
     H --> L
     J --> L
-    K --> L
+...K --> L...
 ###5. Программа
 package com.itproger;
 
