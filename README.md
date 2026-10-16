@@ -115,7 +115,7 @@ graph TD
 ```
 
 ###5. Программа
-
+```java
 package com.itproger;
 
 import java.util.Scanner;
@@ -153,3 +153,4 @@ public class Main {
         input.close();
     }
 }
+```
